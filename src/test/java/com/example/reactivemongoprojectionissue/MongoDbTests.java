@@ -45,7 +45,7 @@ class MongoDbTests {
         obj.setCorrelationId("ID");
         UUID id = UUID.randomUUID();
         obj.setId(id);
-        obj.setSubTransaction(new ApiSubTransaction(String.format("2023-10-01"), UUID.randomUUID().toString()));
+        obj.setSubTransaction(new ApiSubTransaction("2023-10-01", UUID.randomUUID().toString()));
 
         repo.insert(obj).block();
         StepVerifier.create(repo.getTransactionsProjections(id)).expectNextMatches(
