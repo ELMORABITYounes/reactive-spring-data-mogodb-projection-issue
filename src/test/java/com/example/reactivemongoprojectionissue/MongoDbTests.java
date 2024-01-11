@@ -16,11 +16,7 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import reactor.test.StepVerifier;
 
-
-import java.util.ArrayList;
 import java.util.UUID;
-
-import static org.junit.Assert.assertEquals;
 
 @DataMongoTest(excludeAutoConfiguration = JmxAutoConfiguration.class)
 @Testcontainers
